@@ -11,6 +11,12 @@
 		3C064D502B7ACB03005F26AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C064D4F2B7ACB03005F26AA /* ContentView.swift */; };
 		3C064D522B7ACB05005F26AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C064D512B7ACB05005F26AA /* Assets.xcassets */; };
 		3C064D552B7ACB05005F26AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C064D542B7ACB05005F26AA /* Preview Assets.xcassets */; };
+		3C064D612B7AE61F005F26AA /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C064D602B7AE61F005F26AA /* APIService.swift */; };
+		3C064D662B7AF8A2005F26AA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3C064D652B7AF8A2005F26AA /* Kingfisher */; };
+		3CCF3AD52B7D22B200D96413 /* LeaguesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF3AD42B7D22B200D96413 /* LeaguesModel.swift */; };
+		3CCF3AD92B7D60F900D96413 /* TeamsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF3AD82B7D60F900D96413 /* TeamsModel.swift */; };
+		3CCF3ADB2B7D618000D96413 /* APITeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF3ADA2B7D618000D96413 /* APITeam.swift */; };
+		3CCF3ADD2B7D647600D96413 /* TeamListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF3ADC2B7D647600D96413 /* TeamListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,11 @@
 		3C064D4F2B7ACB03005F26AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3C064D512B7ACB05005F26AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C064D542B7ACB05005F26AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3C064D602B7AE61F005F26AA /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		3CCF3AD42B7D22B200D96413 /* LeaguesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesModel.swift; sourceTree = "<group>"; };
+		3CCF3AD82B7D60F900D96413 /* TeamsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsModel.swift; sourceTree = "<group>"; };
+		3CCF3ADA2B7D618000D96413 /* APITeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITeam.swift; sourceTree = "<group>"; };
+		3CCF3ADC2B7D647600D96413 /* TeamListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C064D662B7AF8A2005F26AA /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +63,12 @@
 		3C064D4C2B7ACB03005F26AA /* FootballSense */ = {
 			isa = PBXGroup;
 			children = (
+				3C064D5F2B7AD11C005F26AA /* Models */,
 				3C064D4D2B7ACB03005F26AA /* FootballSenseApp.swift */,
 				3C064D4F2B7ACB03005F26AA /* ContentView.swift */,
+				3CCF3ADC2B7D647600D96413 /* TeamListView.swift */,
+				3C064D602B7AE61F005F26AA /* APIService.swift */,
+				3CCF3ADA2B7D618000D96413 /* APITeam.swift */,
 				3C064D512B7ACB05005F26AA /* Assets.xcassets */,
 				3C064D532B7ACB05005F26AA /* Preview Content */,
 			);
@@ -65,6 +81,15 @@
 				3C064D542B7ACB05005F26AA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3C064D5F2B7AD11C005F26AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3CCF3AD42B7D22B200D96413 /* LeaguesModel.swift */,
+				3CCF3AD82B7D60F900D96413 /* TeamsModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +108,9 @@
 			dependencies = (
 			);
 			name = FootballSense;
+			packageProductDependencies = (
+				3C064D652B7AF8A2005F26AA /* Kingfisher */,
+			);
 			productName = FootballSense;
 			productReference = 3C064D4A2B7ACB03005F26AA /* FootballSense.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +139,9 @@
 				Base,
 			);
 			mainGroup = 3C064D412B7ACB03005F26AA;
+			packageReferences = (
+				3C064D642B7AF8A2005F26AA /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 3C064D4B2B7ACB03005F26AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +169,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C064D502B7ACB03005F26AA /* ContentView.swift in Sources */,
+				3CCF3AD92B7D60F900D96413 /* TeamsModel.swift in Sources */,
+				3CCF3ADD2B7D647600D96413 /* TeamListView.swift in Sources */,
+				3C064D612B7AE61F005F26AA /* APIService.swift in Sources */,
+				3CCF3AD52B7D22B200D96413 /* LeaguesModel.swift in Sources */,
 				3C064D4E2B7ACB03005F26AA /* FootballSenseApp.swift in Sources */,
+				3CCF3ADB2B7D618000D96413 /* APITeam.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +380,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3C064D642B7AF8A2005F26AA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3C064D652B7AF8A2005F26AA /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C064D642B7AF8A2005F26AA /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3C064D422B7ACB03005F26AA /* Project object */;
 }

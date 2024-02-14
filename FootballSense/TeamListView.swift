@@ -1,16 +1,16 @@
 //
-//  ContentView.swift
+//  TeamListView.swift
 //  FootballSense
 //
-//  Created by Kenny Albert on 2/12/24.
+//  Created by Kenny Albert on 2/14/24.
 //
 
 import SwiftUI
 import Kingfisher
 
-struct ContentView: View {
-    @State private var leagues: [LeagueItem] = []
-    let service = APIService()
+struct TeamListView: View {
+    @State private var teams: [TeamItem] = []
+    let service = APITeam()
     let columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -19,15 +19,15 @@ struct ContentView: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns) {
-                if leagues.isEmpty {
-                    Text("Loading leagues...")
+                if teams.isEmpty {
+                    Text("Loading teams...")
                 } else {
-                    ForEach(leagues, id: \.league?.id) { league in
+                    ForEach(teams, id: \.team?.id) { team in
                         VStack {
-                            KFImage(URL(string: league.league?.logo ?? ""))
+                            KFImage(URL(string: team.team?.logo ?? ""))
                                 .resizable()
                                 .frame(width: 100, height: 100)
-                            Text(league.league?.name ?? "")
+                            Text(team.team?.name ?? "")
                                 .font(.caption)
                         }
                         .padding(.top)
@@ -42,7 +42,7 @@ struct ContentView: View {
         .padding()
         .onAppear {
             Task {
-                leagues = await service.getCountries()
+                teams = await service.getTeams(leagueID: "39")
             }
         }
     }
@@ -50,5 +50,5 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView()
+    TeamListView()
 }
